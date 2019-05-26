@@ -7,11 +7,69 @@
 
  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <title></title>
+    <link rel='stylesheet' href="style.css">
+    <title>Survey</title>
   </head>
   <body>
-    <p>Answer These Questions to find the right one for you!</p>
+    <div class= 'container'>
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Question 1
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="questionOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <input type="radio" name="gender" value="male" checked> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="other"> Other
+                    </form>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Question 2
+                  </button>
+                </h2>
+              </div>
+              <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <input type="radio" name="gender" value="male" checked> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="other"> Other
+                      </form>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Question 3
+                  </button>
+                </h2>
+              </div>
+              <div id="questionThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+                        <input type="radio" name="gender" value="male" checked> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                        <input type="radio" name="gender" value="other"> Other
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
 
  
     <script
