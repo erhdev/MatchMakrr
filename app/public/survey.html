@@ -14,6 +14,22 @@
     <div class= 'container'>
         <div class="accordion" id="accordionExample">
             <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Name
+                    </button>
+                  </h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <p>What is your name?</p>
+                    <input type='text' id='name'>
+                  </div>
+                </div>
+              </div>
+            <div class="card">
               <div class="card-header" id="headingOne">
                 <h2 class="mb-0">
                   <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -22,13 +38,16 @@
                 </h2>
               </div>
           
-              <div id="questionOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                    <form>
-                        <input type="radio" name="gender" value="male" checked> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="other"> Other
-                    </form>
+                  <p>How often do you drink V8?</p>
+                  <select id = 'q1'>
+                    <option>1 (Never)</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5 (Very Often)</option>
+                  </select>
                 </div>
               </div>
             </div>
@@ -40,13 +59,16 @@
                   </button>
                 </h2>
               </div>
-              <div id="questionTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                    <form>
-                        <input type="radio" name="gender" value="male" checked> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="other"> Other
-                      </form>
+                    <p>How often do you drink V8?</p>
+                    <select id = 'q2'>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                 </div>
               </div>
             </div>
@@ -58,17 +80,21 @@
                   </button>
                 </h2>
               </div>
-              <div id="questionThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-                    <form>
-                        <input type="radio" name="gender" value="male" checked> Male<br>
-                        <input type="radio" name="gender" value="female"> Female<br>
-                        <input type="radio" name="gender" value="other"> Other
-                      </form>
+                    <p>How often do you drink V8?</p>
+                    <select id = 'q3'>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
                 </div>
               </div>
             </div>
           </div>
+      <button id='submit'>Find your Match!</button>
     </div>
 
  
@@ -87,5 +113,20 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
         crossorigin="anonymous">
     </script>
+    <script>
+        
+    $("#submit").on('click', function() {
+      var results = {
+        name: $('#name').val(),
+        data: [
+        $('#q1').val(),
+        $('#q2').val(),
+        $('#q3').val(),
+       ] 
+      };
+      console.log(results);
+      $.post('/api/matches' , results);
+    })
+    </script>
   </body>
-</html>
+</html> 
