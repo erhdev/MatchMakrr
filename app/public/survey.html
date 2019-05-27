@@ -118,7 +118,7 @@
     $("#submit").on('click', function() {
       var results = {
         name: $('#name').val(),
-        data: [
+        responses: [
         $('#q1').val(),
         $('#q2').val(),
         $('#q3').val(),
@@ -126,6 +126,19 @@
       };
       console.log(results);
       $.post('/api/matches' , results);
+      $.get('/api/matches', function(data){
+        console.log(data);
+        let compatScores = [];
+        for (let i = 0; i < data.length; i++) {
+          let compatScore = 0;
+          for(let j = 0; j < results.responses.length; j++) {
+            let answerDiff = parseInt(data[i].responses[j]) - parseInt(results.responses[j])
+            compatScore += Math.abs(answerDiff)
+          }
+          compatScores.push(compatScore);
+          console.log(compatScores)
+        }
+       })
     })
     </script>
   </body>
