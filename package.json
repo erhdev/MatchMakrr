@@ -1,0 +1,25 @@
+{
+  "name": "matchmakrr",
+  "version": "1.0.0",
+  "description": "Basic app for learning routes",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madflowerr/MatchMakrr.git"
+  },
+  "author": "erh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madflowerr/MatchMakrr/issues"
+  },
+  "homepage": "https://github.com/madflowerr/MatchMakrr#readme"
+}

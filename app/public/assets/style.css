@@ -1,0 +1,38 @@
+body {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(to right,  rgb(255, 187, 60), rgb(255, 146, 164))
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#carousel {
+   position: relative;
+   z-index: 1;
+}
+.super-impose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 2;
+}
+#welcome-text {
+ background-color: black; 
+}
+
+#start-survey {
+    margin-left: 2%;
+    border-radius : 40%;
+    border: none;
+    padding: 2%;
+    background-image: linear-gradient(to left, rgb(255, 187, 60), rgb(255, 146, 164))
+}
+#images{
+    margin: auto;
+    position: relative;
+}
