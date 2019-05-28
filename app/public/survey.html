@@ -127,7 +127,6 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -150,6 +149,7 @@
     <script>
         
     $("#submit").on('click', function() {
+
       var results = {
         name: $('#name').val(),
         responses: [
@@ -177,9 +177,10 @@
           var match = data[compatScores.indexOf(lowScore)];
 
           console.log(match)
+          $('#result-zone').empty();
           $('#result-zone').append(
             $('<h2>').text(match.name),
-            $(`<img src= ${match.photo} style = width: 100%, height:auto>`),
+            $(`<img src= ${match.photo} class = 'rounded' style='width: 100%'>`),
 
           )
           $('#match-modal').modal('toggle')
