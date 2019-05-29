@@ -7,7 +7,7 @@
 
  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel='stylesheet' href="style.css">
+    <link rel='stylesheet' href="/app/public/assets/style.css">
     <title>Survey</title>
   </head>
   <body>
@@ -56,7 +56,7 @@
           
               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
-                  <p>How often do you drink V8?</p>
+                  <p>Are you on social media sites often?</p>
                   <select id = 'q1'>
                     <option>1 (Never)</option>
                     <option>2</option>
@@ -98,8 +98,8 @@
               </div>
               <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                 <div class="card-body">
-                    <p>How often do you drink V8?</p>
-                    <select id = 'q3'>
+                    <p>How intensely would you describe your own desire for adventure, with 1 being non-existent and 5 being all-encompassing?</p>
+                    <select id = 'q5'>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -109,6 +109,48 @@
                 </div>
               </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Question 4
+                    </button>
+                  </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                  <div class="card-body">
+                      <p>How often do you work out?</p>
+                      <select id = 'q4'>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                  <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Question 5
+                      </button>
+                    </h2>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>How often do you read books?</p>
+                        <select id = 'q3'>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                  </div>
+                </div>
           </div>
       <button id='submit'>Find your Match!</button>
     </div>
@@ -156,6 +198,8 @@
         $('#q1').val(),
         $('#q2').val(),
         $('#q3').val(),
+        $('#q4').val(),
+        $('#q5').val(),
        ] 
       };
       console.log(results);
