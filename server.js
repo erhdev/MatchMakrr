@@ -2,8 +2,12 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
-var port = process.env.port || 2019;
-var host = process.env.host || '0.0.0.0';
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 2019;
+}
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
