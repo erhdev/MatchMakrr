@@ -10,6 +10,7 @@ if (port == null || port == "") {
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('app/public'))
 
 
 require("./app/routing/htmlRoutes")(app);
